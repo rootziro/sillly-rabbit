@@ -16,3 +16,5 @@ def generate_hmacpasswd(master_key, service_name, length=16, use_special_chars=T
 additional_chars = string.ascii_letters + string.digits
 if use_special_chars: # type: ignore
  additional_chars+= string.punctuation
+
+random_part = ''.join(secrets.choice(additional_chars))
