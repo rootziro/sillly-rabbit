@@ -21,3 +21,6 @@ def hash_password(password):
 
     # Hash password using PBKDF2 with 100,000 iterations and SHA-256
     password_hash = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), salt, 100000)
+
+    # Return salt and password hash
+    return salt + password_hash
