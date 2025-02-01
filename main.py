@@ -10,7 +10,8 @@ def generate_hmacpasswd(master_key, service_name, length=16, use_special_chars=T
   master_key.encode()
   service_name.encode()
   hashlib.sha256
-  ).hexdigest()
+  hmac.hexdigest()
+ )
  
 # 2. Generate random chars using 'secrets' module
 additional_chars = string.ascii_letters + string.digits
