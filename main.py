@@ -1,21 +1,12 @@
-import hmac
 import hashlib
 import secrets
+import random
 import string
 
-def generate_hmacpasswd(master_key, service_name, length=16, use_special_chars=True):
+# Generate a secure random password length of 20
 
- # 1. Generate deterministic base using HMAC with sha-256
- base_hash = hmac.new(
-  master_key.encode()
-  service_name.encode()
-  hashlib.sha256
-  hmac.hexdigest()
- )
- 
-# 2. Generate random chars using 'secrets' module
-additional_chars = string.ascii_letters + string.digits
-if use_special_chars: # type: ignore
- additional_chars+= string.punctuation
+password_length = 20
+characters = string.ascii_letters + string.ascii_lowercase + string.ascii_uppercase + string.punctuation
+password = ''.join(secrets.choice(characters) for i in range(password_length))
 
-random_part = ''.join(secrets.choice(additional_chars))
+print("Password Generated", password)
