@@ -1,5 +1,5 @@
 import secrets
-import string
+import string 
 from storage import store_password
 
 # Generate a secure random password length of 20
