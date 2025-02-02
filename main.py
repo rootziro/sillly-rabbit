@@ -1,8 +1,6 @@
-import hashlib
 import secrets
-import random
 import string
-import os
+from storage import store_password
 
 # Generate a secure random password length of 20
 password_length = 20
@@ -20,3 +18,6 @@ secure_token = secrets.token_urlsafe(20)
 print("Password Generated", password)
 print("Secure Random Integer", secure_random_int)
 print("Secure Token", secure_token)
+
+#Store passwd
+store_password(password)
