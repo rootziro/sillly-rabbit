@@ -4,7 +4,7 @@ import os
 
 def hash_password(password):
     #Random salt
-
+    
     salt = os.urandom(20)
 
     # Hash password using PBKDF2 with 100,000 iterations and SHA-256
