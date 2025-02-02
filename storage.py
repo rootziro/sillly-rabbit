@@ -11,4 +11,4 @@ def hash_password(password):
     password_hash = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), salt, 100000)
 
     # Return salt and password hash
-    return salt + password_hash
+    return salt + password_hash 
