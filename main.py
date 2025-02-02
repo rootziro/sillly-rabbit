@@ -11,7 +11,15 @@ characters = string.ascii_letters + string.ascii_lowercase + string.ascii_upperc
 # Secure random password
 password = ''.join(secrets.choice(characters) for i in range(password_length))
 
+#Generate random integer
+secure_random_int = secrets.randbelow(100)
+
+#Generate secure URL-safe token
+secure_token = secrets.token_urlsafe(20)
+
 print("Password Generated", password)
+print("Secure Random Integer", secure_random_int)
+print("Secure Token", secure_token)
 
 # Create secure password storage Hashlib
 def hash_password(password):
