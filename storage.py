@@ -19,3 +19,10 @@ def store_password(password):
 
     # Connect to database and store password_hash
     conn = sqlite3.connect('secure_storage.db')
+    cursor = conn.cursor()
+
+    cursor.execute('CREATE TABLE IF NOT EXISTS passwords (password BLOB)')
+
+    cursor.execute('INSERT INTO passwords (password) VALUES (?)', (password_hash,))
+    conn.commit()
+    conn.close()
