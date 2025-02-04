@@ -1,0 +1,24 @@
+# Requirements for the Silly Rabbit project
+
+# Web framework
+Flask==2.1.1
+
+# Database
+SQLAlchemy==1.4.32
+
+# Authentication
+Flask-Login==0.5.0
+
+# Migrations
+Flask-Migrate==3.1.0
+
+# Environment variables
+python-dotenv==0.19.2
+
+# Testing
+pytest==7.0.1
+pytest-flask==1.2.0
+
+# Linting and formatting
+flake8==4.0.1
+black==22.1.0
