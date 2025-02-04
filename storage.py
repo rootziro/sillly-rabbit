@@ -2,6 +2,7 @@
 import hashlib
 import sqlite3
 import os
+from main import secure_token
 
 def hash_password(password):
     #Random salt
@@ -24,5 +25,10 @@ def store_password(password):
     cursor.execute('CREATE TABLE IF NOT EXISTS passwords (password BLOB)')
 
     cursor.execute('INSERT INTO passwords (password) VALUES (?)', (password_hash,))
+    conn.commit()
+    conn.close()
+
+    # Insert token into database
+    cursor.execute('INSERT INTO tokens (token) VALUES (?)', (secure_token,))
     conn.commit()
     conn.close()
