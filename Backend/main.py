@@ -20,4 +20,4 @@ print("Secure Random Integer", secure_random_int)
 print("Secure Token", secure_token)
 
 store_password(password)
-
+start_scheduler()
