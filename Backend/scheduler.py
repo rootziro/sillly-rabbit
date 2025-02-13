@@ -27,7 +27,7 @@ def start_scheduler(task):
     # Keep script alive
     try:
         while True:
-            time.sleep(1)
+            time.sleep(3600)
     except (KeyboardInterrupt, SystemExit):
         stop_run_continuously.set()
     
