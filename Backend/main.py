@@ -1,7 +1,7 @@
 import secrets
 import string   
-from storage import store_password
-from scheduler import start_scheduler
+from Backend.storage import store_password
+from Backend.scheduler import start_scheduler
 
 # Generate a secure random password length of 20
 password_length = 20

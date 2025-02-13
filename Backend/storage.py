@@ -2,7 +2,7 @@
 import hashlib
 import sqlite3
 import os
-from main import secure_token
+from Backend.main import secure_token
 
 def hash_password(password):
     #Random salt
