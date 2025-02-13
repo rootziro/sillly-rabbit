@@ -20,3 +20,6 @@ def generate_password():
         'secure_random_int': secure_random_int,
         'secure_token': secure_token
     })
+
+if __name__ == '__main__':
+    app.run(debug=True)                                     
