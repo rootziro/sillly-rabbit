@@ -1,7 +1,11 @@
+import logging
 import secrets
 import string   
 from Backend.storage import store_password
 from Backend.scheduler import start_scheduler
+
+# Logging config
+logging.basicConfig(filename='app.log', level=logging.INFO)
 
 # Generate a secure random password length of 20
 password_length = 20
