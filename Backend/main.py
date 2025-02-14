@@ -15,10 +15,10 @@ secure_random_int = secrets.randbelow(100)
 #Generate secure URL-safe token
 secure_token = secrets.token_urlsafe(20)
 
-print("Password Generated", password)
-print("Secure Random Integer", secure_random_int)
-print("Secure Token", secure_token)
-
 store_password(password)
+
+# non-sensitive logging
+print("Password stored successfully")
+
 start_scheduler()
 
