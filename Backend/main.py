@@ -25,4 +25,3 @@ store_password(password)
 print("Password stored successfully")
 
 start_scheduler()
-
