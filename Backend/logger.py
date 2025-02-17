@@ -4,6 +4,7 @@ from logging.handlers import RotatingFileHandler
 logger = logging.getLogger('PasswordGenerator')
 logger.setLevel(logging.INFO)
 
+# Creating handler
 handler = RotatingFileHandler('password_generator.log', maxBytes=10000, backupCount=1)
 handler.setLevel(logging.INFO)
 
@@ -15,5 +16,3 @@ logger.addHandler(handler)
 
 # Log messages
 logger.info('example log message')
-
-
