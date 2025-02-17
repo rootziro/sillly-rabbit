@@ -17,10 +17,10 @@ def run_continuously(interval=1):
     continuous_thread.start()
     return cease_continuous_run
 
-def start_scheduler(task):
+def start_scheduler(task, interval_minutes):
     schedule.start_scheduler()
 
-    schedule.every(3).minutes.do(task)
+    schedule.every(interval_minutes).minutes.do(task)
 
     # Continuously run
     stop_run_continuously = run_continuously()
@@ -31,3 +31,15 @@ def start_scheduler(task):
             time.sleep(3600)
     except (KeyboardInterrupt, SystemExit):
         stop_run_continuously.set()
+
+def Example_task():
+    try:
+        logger.info("Running Example Task")
+        # Task logic here
+    except Exception as e:
+        logger.error(f"Error in Example Task: {e}")
+
+if __name__ == "__main__":
+# Get interval from user input / configuration
+    interval_minutes = int(input("Enter interval in minutes: "))
+    start_scheduler(Example_task, interval_minutes)
