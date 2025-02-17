@@ -32,6 +32,7 @@ def start_scheduler(task, interval_minutes):
     except (KeyboardInterrupt, SystemExit):
         stop_run_continuously.set()
 
+# Example task, please modify as needed
 def Example_task():
     try:
         logger.info("Running Example Task")
