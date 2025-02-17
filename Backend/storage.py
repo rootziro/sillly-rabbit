@@ -4,6 +4,8 @@ import sqlite3
 import os
 from Backend.main import secure_token
 
+# Implement bcrypt for a more secure method of Hashing
+
 def hash_password(password):
     #Random salt
     
