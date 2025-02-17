@@ -1,6 +1,7 @@
 import schedule
 import time
 import threading
+from Backend.logger import logger
 
 def run_continuously(interval=1):
     cease_continuous_run = threading.Event()
@@ -30,4 +31,3 @@ def start_scheduler(task):
             time.sleep(3600)
     except (KeyboardInterrupt, SystemExit):
         stop_run_continuously.set()
-    
