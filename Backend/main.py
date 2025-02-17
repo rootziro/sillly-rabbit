@@ -4,6 +4,8 @@ import string
 from Backend.storage import store_password
 from Backend.scheduler import start_scheduler
 
+# PLEASE NOTE: Add Error handling to the code below
+
 # Logging config
 logging.basicConfig(filename='app.log', level=logging.INFO)
 
